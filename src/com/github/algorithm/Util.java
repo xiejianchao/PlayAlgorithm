@@ -1,0 +1,23 @@
+package com.github.algorithm;
+
+public class Util {
+
+    public static void print(String msg) {
+        System.out.print(msg);
+    }
+
+    public static void println(String msg) {
+        System.out.println(msg);
+    }
+
+    public static void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + (i < arr.length - 1 ? "," : ""));
+        }
+    }
+
+    public static void print(Object obj) {
+        System.out.print(String.valueOf(obj));
+    }
+
+}
