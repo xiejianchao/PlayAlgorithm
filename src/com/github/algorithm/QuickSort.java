@@ -1,5 +1,11 @@
 package com.github.algorithm;
 
+import com.github.algorithm.data.BaseData;
+import com.github.algorithm.util.Util;
+
+/**
+ * 快速查找
+ */
 public class QuickSort {
 
     public static void main(String[] args) {
@@ -31,7 +37,7 @@ public class QuickSort {
     }
 
     /**
-     * 核心实现 <br>
+     * 核心实现，一般称之为partition <br>
      * @param arr
      * @param left
      * @param right

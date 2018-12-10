@@ -1,4 +1,4 @@
-package com.github.algorithm;
+package com.github.algorithm.util;
 
 public class Util {
 
