@@ -15,7 +15,7 @@ public class QuickSort {
     }
 
     /**
-     * 依次比较第一个元素v，比第一个元素小，就将其移动到v前方，然后递归调用
+     * 依次比较第一个元素v，比第一个元素小，就将其移动到v前方，然后递归重复调用
      * @param arr
      * @param left
      * @param right
