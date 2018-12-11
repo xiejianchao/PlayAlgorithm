@@ -1,4 +1,4 @@
-package com.github.algorithm.link;
+package com.github.algorithm.linked;
 
 public class Node {
 

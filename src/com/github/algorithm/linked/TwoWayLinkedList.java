@@ -1,17 +1,20 @@
-package com.github.algorithm.link;
+package com.github.algorithm.linked;
 
 import com.github.algorithm.util.Log;
 
-public class SingleLinkedList {
+public class TwoWayLinkedList {
 
     private Node head;
+    private Node tail;
     private int size;
 
     public void addHead(int node) {
         Node newNode = new Node(node);
         if (head == null) {
             head = newNode;
+            tail = newNode;
         } else {
+            head.prev = newNode;
             newNode.next = head;
             head = newNode;
         }
@@ -21,15 +24,34 @@ public class SingleLinkedList {
     public void addHead(Node node) {
         if (head == null) {
             head = node;
+            tail = node;
         } else {
+            head.prev = node;
             node.next = head;
             head = node;
         }
         size++;
     }
 
+    public void addTail(int data) {
+        Node newNode = new Node(data);
+        if (head == null && size == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
+
     public Node getHead() {
         return head;
+    }
+
+    public Node getTail() {
+        return tail;
     }
 
     public int getSize() {
@@ -65,12 +87,27 @@ public class SingleLinkedList {
         //删除的是头结点
         if (current == head) {
             head = current.next;
+            head.prev = null;
         } else {
             previous.next = current.next;
+            current.next.prev = previous;
         }
 
         size--;
         return true;
+    }
+
+    public void deleteHead() {
+        //TODO
+    }
+
+    public void deleteTail() {
+        if (head == null && tail == null && size == 0) {
+            return;
+        }
+        tail = tail.prev;
+        tail.next = null;
+        size--;
     }
 
     public void print() {
