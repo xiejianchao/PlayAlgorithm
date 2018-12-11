@@ -24,7 +24,6 @@ public class MergeSorted {
             } else {
                 result[k++] = arr2[j++];
             }
-
         }
 
         while (i < arr.length) {
@@ -36,5 +35,4 @@ public class MergeSorted {
         }
         return result;
     }
-
 }

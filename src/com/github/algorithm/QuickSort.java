@@ -4,7 +4,7 @@ import com.github.algorithm.data.BaseData;
 import com.github.algorithm.util.Util;
 
 /**
- * 快速查找
+ * 快速排序
  */
 public class QuickSort {
 
@@ -62,7 +62,5 @@ public class QuickSort {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-
     }
-
 }
