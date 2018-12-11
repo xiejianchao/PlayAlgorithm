@@ -1,4 +1,4 @@
-package com.github.algorithm;
+package com.github.algorithm.sort;
 
 import com.github.algorithm.data.BaseData;
 import com.github.algorithm.util.Util;
