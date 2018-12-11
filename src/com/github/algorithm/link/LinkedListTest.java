@@ -1,6 +1,6 @@
 package com.github.algorithm.link;
 
-import com.github.algorithm.util.Util;
+import com.github.algorithm.util.Log;
 
 public class LinkedListTest {
 
@@ -15,9 +15,9 @@ public class LinkedListTest {
 
         link.print();
 
-        Util.println("删除节点5后的链表为：");
+        Log.println("删除节点5后的链表为：");
         link.delete(5);
         link.print();
-        Util.println("删除节点5后的链表长度为：" + link.getSize());
+        Log.println("删除节点5后的链表长度为：" + link.getSize());
     }
 }

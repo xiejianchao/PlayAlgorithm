@@ -1,6 +1,6 @@
 package com.github.algorithm.util;
 
-public class Util {
+public class Log {
 
     public static void print(String msg) {
         System.out.print(msg);
@@ -17,7 +17,7 @@ public class Util {
     }
 
     public static void print(Object obj) {
-        System.out.print(String.valueOf(obj));
+        System.out.print(obj);
     }
 
 }

@@ -1,7 +1,7 @@
 package com.github.algorithm.sort;
 
 import com.github.algorithm.data.BaseData;
-import com.github.algorithm.util.Util;
+import com.github.algorithm.util.Log;
 
 /**
  * 将两个有序的数组合并为一个有序数组
@@ -9,8 +9,8 @@ import com.github.algorithm.util.Util;
 public class MergeSorted {
 
     public static void main(String[] args) {
-        int[] mergeSorted = mergeSorted(BaseData.ARR2, BaseData.ARR3);
-        Util.printArr(mergeSorted);
+        int[] mergeSorted = mergeSorted(BaseData.ARR_SORTED_1, BaseData.ARR_SORTED_2);
+        Log.printArr(mergeSorted);
     }
 
     private static int[] mergeSorted(int[] arr, int[] arr2) {

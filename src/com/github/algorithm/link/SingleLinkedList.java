@@ -1,6 +1,6 @@
 package com.github.algorithm.link;
 
-import com.github.algorithm.util.Util;
+import com.github.algorithm.util.Log;
 
 public class SingleLinkedList {
 
@@ -44,7 +44,7 @@ public class SingleLinkedList {
      * 3.node.next=node.next.next;判断保护node.next是否为空
      */
     public boolean delete(int data) {
-        //当前不存在不执行删除
+        //当前链表不存在不执行删除
         if (size == 0 || head == null) {
             return false;
         }
@@ -57,7 +57,7 @@ public class SingleLinkedList {
                 previous = current;
                 current = current.next;
             } else {
-                Util.println("要删除的节点不存在当前链表中");
+                Log.println("要删除的节点不存在当前链表中");
                 return false;
             }
         }
@@ -84,7 +84,7 @@ public class SingleLinkedList {
                 sb.append(node.data + (node.next == null ? "" : "->"));
             }
         }
-        System.out.println(sb.toString());
+        Log.println(sb.toString());
         sb.setLength(0);
     }
 }

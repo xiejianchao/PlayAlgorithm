@@ -1,7 +1,7 @@
 package com.github.algorithm.sort;
 
 import com.github.algorithm.data.BaseData;
-import com.github.algorithm.util.Util;
+import com.github.algorithm.util.Log;
 
 /**
  * 快速排序
@@ -11,7 +11,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = BaseData.ARR;
         quickSort(arr);
-        Util.printArr(arr);
+        Log.printArr(arr);
     }
 
     private static void quickSort(int[] arr) {
