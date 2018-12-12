@@ -8,6 +8,9 @@ public class TwoWayLinkedList {
     private Node tail;
     private int size;
 
+    /**
+     * 添加头节点
+     */
     public void addHead(int node) {
         Node newNode = new Node(node);
         if (head == null) {
@@ -21,6 +24,9 @@ public class TwoWayLinkedList {
         size++;
     }
 
+    /**
+     * 添加头节点
+     */
     public void addHead(Node node) {
         if (head == null) {
             head = node;
@@ -33,6 +39,9 @@ public class TwoWayLinkedList {
         size++;
     }
 
+    /**
+     * 添加尾节点
+     */
     public void addTail(int data) {
         Node newNode = new Node(data);
         if (head == null && size == 0) {
@@ -46,28 +55,50 @@ public class TwoWayLinkedList {
         size++;
     }
 
-    public Node getHead() {
-        return head;
+    /**
+     * 删除尾节点
+     */
+    public void deleteTail() {
+        if (head == null || tail == null || size == 0) {
+            return;
+        }
+        tail = tail.prev;
+        tail.next = null;
+        size--;
     }
 
-    public Node getTail() {
-        return tail;
-    }
+    /**
+     * 直接删除头节点
+     */
+    public boolean deleteHead() {
+        //如果是空链表，则返回
+        if (head == null || tail == null || size == 0) {
+            return false;
+        }
+        //如果链表只有一个节点，直接将head和tail节点设置为null
+        if (size == 1) {
+            head = null;
+            tail = null;
+            size--;
+            return true;
+        }
 
-    public int getSize() {
-        return size;
+        //节点数大于1
+        head = head.next;
+        head.prev = null;
+        size--;
+        return true;
     }
 
     /**
      * 思路
-     *
      * 1.先判断是否是收尾节点
      * 2.然后循环整个链表，找到node.next == deleteNode
      * 3.node.next=node.next.next;判断保护node.next是否为空
      */
     public boolean delete(int data) {
         //当前链表不存在不执行删除
-        if (size == 0 || head == null) {
+        if (head == null || tail == null || size == 0) {
             return false;
         }
 
@@ -97,17 +128,16 @@ public class TwoWayLinkedList {
         return true;
     }
 
-    public void deleteHead() {
-        //TODO
+    public Node getHead() {
+        return head;
     }
 
-    public void deleteTail() {
-        if (head == null && tail == null && size == 0) {
-            return;
-        }
-        tail = tail.prev;
-        tail.next = null;
-        size--;
+    public Node getTail() {
+        return tail;
+    }
+
+    public int size() {
+        return size;
     }
 
     public void print() {

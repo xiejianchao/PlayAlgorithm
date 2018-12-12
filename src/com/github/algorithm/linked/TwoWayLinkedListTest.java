@@ -18,14 +18,20 @@ public class TwoWayLinkedListTest {
 
         Log.print("当前的链表为：");
         link.print();
+        Log.println("当前的链表长度为：" + link.size());
 
-        Log.print("删除节点5后的链表为：");
-        link.delete(1);
-        link.print();
-        Log.println("删除节点5后的链表长度为：" + link.getSize());
+//        Log.print("删除节点5后的链表为：");
+//        link.delete(1);
+//        link.print();
+//        Log.println("删除节点5后的链表长度为：" + link.size());
 
-        Log.println("删除尾节点后的链表为：");
-        link.deleteTail();
+//        Log.println("删除尾节点后的链表为：");
+//        link.deleteTail();
+//        link.print();
+
+        Log.print("删除头节点后的链表为：");
+        link.deleteHead();
         link.print();
+        Log.println("删除头节点后的链表长度为：" + link.size());
     }
 }
