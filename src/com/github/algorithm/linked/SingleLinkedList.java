@@ -66,6 +66,7 @@ public class SingleLinkedList {
     }
 
     /**
+     * 单链表翻转
      * 从第2个节点到第N个节点，依次逐节点插入到第1个节点(head节点)之后，最后将第一个节点挪到新表的表尾
      */
     public void reverseLinked() {
