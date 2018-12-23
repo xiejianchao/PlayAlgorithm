@@ -11,7 +11,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = BaseData.ARR;
         quickSort(arr);
-        Log.printArr(arr);
+        Log.print(arr);
     }
 
     private static void quickSort(int[] arr) {

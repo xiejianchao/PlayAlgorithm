@@ -10,7 +10,7 @@ public class MergeSorted {
 
     public static void main(String[] args) {
         int[] mergeSorted = mergeSorted(BaseData.ARR_SORTED_1, BaseData.ARR_SORTED_2);
-        Log.printArr(mergeSorted);
+        Log.print(mergeSorted);
     }
 
     private static int[] mergeSorted(int[] arr, int[] arr2) {
