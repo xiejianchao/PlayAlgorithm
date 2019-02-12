@@ -9,7 +9,6 @@ public class InsertSort {
         int[] arr = BaseData.ARR;
         sort(arr);
         Log.print(arr);
-
     }
 
     private static void sort(int[] arr) {
@@ -23,5 +22,4 @@ public class InsertSort {
             }
         }
     }
-
 }
