@@ -20,8 +20,9 @@ public class SingleLinkedListTest {
 //        link.print();
 //        Log.println("删除节点5后的链表长度为：" + link.getSize());
 
-        link.reverseLinked();
+
         Log.println("链表翻转后为：");
+        link.reverse(link.getHead());
         link.print();
 //        link.reverseLinked();
 //        Log.println("第二次链表翻转后为：");

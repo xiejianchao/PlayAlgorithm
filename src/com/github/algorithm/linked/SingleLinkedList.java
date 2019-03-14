@@ -30,7 +30,7 @@ public class SingleLinkedList {
 
     /**
      * 思路
-     *
+     * <p>
      * 1.先判断是否是收尾节点
      * 2.然后循环整个链表，找到node.next == deleteNode
      * 3.node.next=node.next.next;判断保护node.next是否为空
@@ -84,6 +84,28 @@ public class SingleLinkedList {
             curr = next;//下一次从当前节点的下一个节点开始遍历
         }
         head = prev;//最后将第一个节点挪到表尾
+    }
+
+    public void reverse(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        if (node.next == null) {
+            return;
+        }
+
+        Node prev = null;
+        Node next;
+        while (node.next != null) {
+            next = node.next;//记住当前节点的下一个节点
+            node.next = prev;//将当前节点的下一个节点和上一个节点交换
+            prev = node;//将当前节点赋值给上一个节点
+            node = next;//下一次从当前节点的下一个节点开始遍历
+        }
+        node.next = prev;//循环结束后，最后一个节点node置为头结点
+        //重置head节点，方便直接打印输出结果
+        head = node;
     }
 
     public Node getHead() {
