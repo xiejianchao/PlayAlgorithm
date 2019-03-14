@@ -123,9 +123,7 @@ public class SingleLinkedList {
         while (tempHead.next != null) {
             Node node = tempHead.next;
             tempHead = node;
-            if (node != null) {
-                sb.append(node.data + (node.next == null ? "" : "->"));
-            }
+            sb.append(node.data + (node.next == null ? "" : "->"));
         }
         Log.println(sb.toString());
         sb.setLength(0);
