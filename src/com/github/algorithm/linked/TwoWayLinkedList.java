@@ -92,7 +92,7 @@ public class TwoWayLinkedList {
 
     /**
      * 思路
-     * 1.先判断是否是收尾节点
+     * 1.先判断是否是首尾节点
      * 2.然后循环整个链表，找到node.next == deleteNode
      * 3.node.next=node.next.next;判断保护node.next是否为空
      */
