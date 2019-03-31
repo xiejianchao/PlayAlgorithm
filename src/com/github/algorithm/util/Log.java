@@ -10,6 +10,10 @@ public class Log {
         System.out.println(msg);
     }
 
+    public static void println(int msg) {
+        System.out.println(msg);
+    }
+
     public static void print(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + (i < arr.length - 1 ? "," : ""));
