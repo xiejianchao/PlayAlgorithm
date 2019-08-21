@@ -11,7 +11,6 @@ public class Water {
         int[] arr = {6, 3, 2, 5, 4};
         int water = getWater(arr);
         Log.println(water);
-
     }
 
     /**
