@@ -65,6 +65,40 @@ public class SingleLinkedList {
         return true;
     }
 
+    public void reversalTest2() {
+        if (head == null || size == 0) {
+            return;
+        }
+
+        Node prev = null;
+        Node next = null;
+        while (head.next != null) {
+            next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        head.next = prev;
+    }
+
+    public void reversalTest() {
+        if (head == null || size == 0) {
+            return;
+        }
+
+        Node curr = head;
+        Node prev = null;
+        Node next = null;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     /**
      * 单链表翻转
      * 从第2个节点到第N个节点，依次逐节点插入到第1个节点(head节点)之后，最后将第一个节点挪到新表的表尾
