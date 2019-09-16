@@ -89,7 +89,6 @@ public class SingleLinkedList {
         Node curr = head;
         Node prev = null;
         Node next = null;
-
         while (curr != null) {
             next = curr.next;
             curr.next = prev;

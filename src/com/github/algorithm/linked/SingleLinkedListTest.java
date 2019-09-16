@@ -26,7 +26,8 @@ public class SingleLinkedListTest {
 //        link.print();
 
 //        link.reverseLinked();
-        link.reversalTest2();
+//        link.reversalTest2();
+        link.reversalTest();
 //        Log.println("第二次链表翻转后为：");
         link.print();
     }
