@@ -8,6 +8,8 @@ public class InsertSort {
 
     public static void main(String[] args) {
         int[] arr = BaseData.ARR;
+        Log.print(arr);
+        Log.println();
         sort(arr);
         Log.print(arr);
     }

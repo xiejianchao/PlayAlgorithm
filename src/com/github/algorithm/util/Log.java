@@ -2,6 +2,10 @@ package com.github.algorithm.util;
 
 public class Log {
 
+    public static void println() {
+        System.out.println();
+    }
+
     public static void print(String msg) {
         System.out.print(msg);
     }
