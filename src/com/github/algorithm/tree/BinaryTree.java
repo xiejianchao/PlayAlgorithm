@@ -1,5 +1,6 @@
 package com.github.algorithm.tree;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class BinaryTree {
@@ -17,6 +18,7 @@ public class BinaryTree {
         TreeNode nodeE = new TreeNode<>("E");
         TreeNode nodeF = new TreeNode<>("F");
         TreeNode nodeG = new TreeNode<>("G");
+
         root.left = nodeB;
         root.right = nodeC;
         nodeB.left = nodeD;
