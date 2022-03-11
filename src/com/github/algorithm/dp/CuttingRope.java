@@ -36,12 +36,15 @@ public class CuttingRope {
      * @return
      */
     public static int cuttingRope2(int n) {
+        //小于4 直接返回 n - 1
         if(n < 4){
             return n - 1;
         }
+        //等于 4 返回 4
         if (n == 4) {
             return 4;
         }
+        //尽可能切成长度为 3 的片段，每次循环减去 3，乘积 res * 3，最后返回时乘以 小于等于 4 的值
         int res = 1;
         while(n > 4){
             res *= 3;
@@ -64,6 +67,10 @@ public class CuttingRope {
         int[] dp = new int[n + 1];
         for (int i = 5; i <= n; i++) {
             for (int j = 2; j < i; j++) {
+                /**
+                 * Math.max(dp[i], Math.max(j * (i - j), j * dp[i - j]))
+                 * 中的 dp[i] 的含义为：j 的取值从 [2, i) 中不断更新 dp[i] 的值，比当前大，就更新
+                 */
                 dp[i] = Math.max(dp[i], Math.max(j * (i - j), j * dp[i - j]));
             }
         }
