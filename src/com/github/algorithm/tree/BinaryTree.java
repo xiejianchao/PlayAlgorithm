@@ -1,6 +1,5 @@
 package com.github.algorithm.tree;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class BinaryTree {
