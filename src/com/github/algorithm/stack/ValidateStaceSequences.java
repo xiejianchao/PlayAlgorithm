@@ -11,7 +11,6 @@ public class ValidateStaceSequences {
         int[] popped = {4, 5, 3, 2, 1};
         int[] popped2 = {5, 4, 3, 2, 1};
         boolean b = validateStackSequences(pushed, popped);
-        boolean b2 = validateStackSequences2(pushed, popped);
         Log.print("res:" + b);
     }
 
