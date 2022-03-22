@@ -11,7 +11,6 @@ public class MergeSorted {
     public static void main(String[] args) {
 //        int[] mergeSorted = mergeSorted(BaseData.ARR_SORTED_1, BaseData.ARR_SORTED_2);
         int[] mergeSorted = mergeSorted(BaseData.ARR_SORTED_3, BaseData.ARR_SORTED_3.length, BaseData.ARR_SORTED_4, BaseData.ARR_SORTED_4.length);
-
         Log.print(mergeSorted);
     }
 
