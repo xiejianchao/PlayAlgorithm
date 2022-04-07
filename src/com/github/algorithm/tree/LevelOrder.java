@@ -39,7 +39,7 @@ public class LevelOrder {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode<Integer> node = queue.poll();
-                temp.add(node.value);
+                temp.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);
                 }

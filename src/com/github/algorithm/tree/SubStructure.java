@@ -39,7 +39,7 @@ public class SubStructure {
         if (a == null) {
             return false;
         }
-        if (a.value != b.value) {
+        if (a.val != b.val) {
             return false;
         }
         return isSame(a.left, b.left) && isSame(a.right, b.right);

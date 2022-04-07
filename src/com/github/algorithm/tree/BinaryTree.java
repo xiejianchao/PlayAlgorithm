@@ -40,7 +40,7 @@ public class BinaryTree {
 
         while (!stack.isEmpty()) {
             TreeNode curr = stack.pop();
-            System.out.print(curr.value + " ");
+            System.out.print(curr.val + " ");
             if (curr.right != null) {
                 stack.push(curr.right);
             }
@@ -63,7 +63,7 @@ public class BinaryTree {
                 head = head.left;
             } else {
                 head = stack.pop();
-                System.out.print(head.value + " ");
+                System.out.print(head.val + " ");
                 head = head.right;
             }
         }
@@ -94,7 +94,7 @@ public class BinaryTree {
 
         while (!s2.isEmpty()) {
             TreeNode curr = s2.pop();
-            System.out.print(curr.value + " ");
+            System.out.print(curr.val + " ");
         }
     }
 

@@ -2,12 +2,12 @@ package com.github.algorithm.tree;
 
 public class TreeNode<T> {
 
-    T value;
+    T val;
     TreeNode left;
     TreeNode right;
 
-    public TreeNode(T value) {
-        this.value = value;
+    public TreeNode(T val) {
+        this.val = val;
     }
 
     public TreeNode getLeft() {

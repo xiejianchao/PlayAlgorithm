@@ -47,7 +47,7 @@ public class LevelOrderZ {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode<Integer> node = queue.poll();
-                temp.add(node.value);
+                temp.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);
                 }
@@ -76,9 +76,9 @@ public class LevelOrderZ {
             for (int i = 0; i < size; i++) {
                 TreeNode<Integer> node = queue.poll();
                 if (res.size() % 2 == 0) {
-                    levelList.addLast(node.value);
+                    levelList.addLast(node.val);
                 } else {
-                    levelList.addFirst(node.value);
+                    levelList.addFirst(node.val);
                 }
 
                 if (node.left != null) {
