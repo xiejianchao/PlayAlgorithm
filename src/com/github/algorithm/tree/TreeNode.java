@@ -2,9 +2,9 @@ package com.github.algorithm.tree;
 
 public class TreeNode<T> {
 
-    T val;
-    TreeNode left;
-    TreeNode right;
+    public T val;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(T val) {
         this.val = val;
