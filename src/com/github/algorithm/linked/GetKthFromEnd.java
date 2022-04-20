@@ -19,7 +19,7 @@ public class GetKthFromEnd {
         node3.next = node4;
         node4.next = node5;
         long start = System.currentTimeMillis();
-        ListNode kthFromEnd2 = getKthFromEnd3(node1, 5);
+        ListNode kthFromEnd2 = getKthFromEnd3(node1, 2);
         long cost = System.currentTimeMillis() - start;
         Log.print("cost:" + cost);
     }

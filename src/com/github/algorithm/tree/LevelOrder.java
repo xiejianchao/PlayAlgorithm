@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * 从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行
+ */
 public class LevelOrder {
 
     public static void main(String[] args) {
@@ -35,11 +38,11 @@ public class LevelOrder {
             queue.add(root);
         }
         while (!queue.isEmpty()) {
-            List<Integer> temp = new ArrayList<>();
+            List<Integer> levelList = new ArrayList<>();
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode<Integer> node = queue.poll();
-                temp.add(node.val);
+                levelList.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);
                 }
@@ -47,7 +50,7 @@ public class LevelOrder {
                     queue.add(node.right);
                 }
             }
-            res.add(temp);
+            res.add(levelList);
         }
         return res;
     }

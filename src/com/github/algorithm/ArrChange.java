@@ -7,10 +7,34 @@ public class ArrChange {
 
     public static void main(String[] args) {
         int[] arr = {1,2,3,4};
-        int[] change = exchange2(arr);
+        int[] change = exchange3(arr);
         System.out.println("res:" + change);
     }
 
+    /**
+     * 快慢指针法
+     * @param nums
+     * @return
+     */
+    public static int[] exchange3(int[] nums) {
+        int slow = 0, fast = 0, temp;
+        while (fast < nums.length) {
+            if (nums[fast] % 2 == 1) {
+                temp = nums[slow];
+                nums[slow] = nums[fast];
+                nums[fast] = temp;
+                slow++;
+            }
+            fast++;
+        }
+        return nums;
+    }
+
+    /**
+     * 首尾双指针
+     * @param nums
+     * @return
+     */
     public static int[] exchange2(int[] nums) {
         if (nums == null || nums.length == 0) {
             return new int[]{};
@@ -52,6 +76,7 @@ public class ArrChange {
         return nums;
     }
 
+    //辅助空间，时间复杂度0(N)
     public static int[] change(int[] nums) {
         if (nums == null || nums.length == 0) {
             return new int[]{};
